@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos Del Conalep</title>
+  <link rel="stylesheet" href="../css/slick.css" />
+  <link rel="stylesheet" href="../css/slick-theme.css" />
+  <style>
+    :root {
+      --negro: #000000;
+      --fondo: #f3f4f6;
+      --texto: #1f2937;
+      --tarjeta: #ffffff;
+      --morado: #6b21a8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header.encabezado {
+      background-image: url('../IMAGEN/y1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #4b5563;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--morado);
+    }
+
+    section {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2.3em;
+      margin-bottom: 30px;
+      text-align: center;
+      color: var(--morado);
+    }
+
+    .carousel {
+      margin-bottom: 20px;
+    }
+
+    .carousel .slick-slide {
+      padding: 10px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      background: white;
+      padding: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.03);
+    }
+
+    .card, .blog {
+      background: var(--tarjeta);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .card img, .blog img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .card h3 {
+      padding: 15px;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-content h3 {
+      color: var(--morado);
+      margin-bottom: 10px;
+    }
+
+    .volver {
+      width: 90%;
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .volver a.boton-link {
+      background-color: #1976D2;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .volver a.boton-link:hover {
+      background-color: #135ba1;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #4b5563;
+      padding: 40px 20px;
+      color: #e5e7eb;
+    }
+
+    /* Estilo para visor flotante */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      display: none;
+    }
+
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+<header class="encabezado">
+  <h1>EVENTOS CONALEP 052</h1>
+</header>
+
+<nav>
+  <a href="#muertos">Día de Muertos</a>
+  <a href="#NAVIDAD">Navidad</a>
+  <a href="#DEPORTES">Deportes</a>
+  <a href="#DDH">Demostración</a>
+  <a href="#festividades">Otros</a>
+  <a href="#talleres">Carreras</a>
+</nav>
+
+<section id="muertos">
+  <h2>DÍA DE MUERTOS</h2>
+  <div class="carousel">
+    <img src="../IMAGEN/m1.jpg" alt="Día de Muertos 1">
+    <img src="../IMAGEN/m2.jpg" alt="Día de Muertos 2">
+    <img src="../IMAGEN/m3.jpg" alt="Día de Muertos 3">
+    <img src="../IMAGEN/m4.jpg" alt="Día de Muertos 4">
+  </div>
+</section>
+
+<section id="NAVIDAD">
+  <h2>NAVIDAD</h2>
+  <div class="carousel">
+    <img src="../IMAGEN/n1.jpg" alt="Navidad 1">
+    <img src="../IMAGEN/n2.jpg" alt="Navidad 2">
+    <img src="../IMAGEN/n3.jpg" alt="Navidad 3">
+    <img src="../IMAGEN/n4.jpg" alt="Navidad 4">
+  </div>
+</section>
+
+<section id="DEPORTES">
+  <h2>DEPORTES</h2>
+  <div class="carousel">
+    <img src="../IMAGEN/i1.jpg" alt="Deportes 1">
+    <img src="../IMAGEN/i2.jpg" alt="Deportes 2">
+    <img src="../IMAGEN/i3.jpg" alt="Deportes 3">
+    <img src="../IMAGEN/i4.jpg" alt="Deportes 4">
+  </div>
+</section>
+
+<section id="DDH">
+  <h2>DEMOSTRACIÓN DE HABILIDADES</h2>
+  <div class="carousel">
+    <img src="../IMAGEN/A1.jpg" alt="Demostración 1">
+    <img src="../IMAGEN/A2.jpg" alt="Demostración 2">
+    <img src="../IMAGEN/A3.jpg" alt="Demostración 3">
+    <img src="../IMAGEN/A4.jpg" alt="Demostración 4">
+  </div>
+</section>
+
+<section id="festividades">
+  <h2>OTROS</h2>
+  <div class="carousel">
+    <div class="card"><img src="../IMAGEN/w1.jpg" alt="Otros 1"><h3>Torneos Internos</h3></div>
+    <div class="card"><img src="../IMAGEN/w2.jpg" alt="Otros 2"><h3>Demostración de habilidades</h3></div>
+    <div class="card"><img src="../IMAGEN/w3.jpg" alt="Otros 3"><h3>Caminata por la integración familiar</h3></div>
+  </div>
+</section>
+
+<section id="talleres">
+  <h2>CARRERAS</h2>
+
+  <h3 style="text-align: center; color: var(--texto); margin-bottom: 20px;">Electrónica</h3>
+  <div class="carousel">
+    <img src="../IMAGEN/j21.jpg" alt="Electrónica 1">
+    <img src="../IMAGEN/j16.jpg" alt="Electrónica 2">
+    <img src="../IMAGEN/j17.jpg" alt="Electrónica 3">
+  </div>
+
+  <h3 style="text-align: center; color: var(--texto); margin: 50px 0 20px;">Computación</h3>
+  <div class="carousel">
+    <img src="../IMAGEN/j3.jpg" alt="Computación 1">
+    <img src="../IMAGEN/j14.jpg" alt="Computación 2">
+    <img src="../IMAGEN/j12.jpg" alt="Computación 3">
+  </div>
+
+  <h3 style="text-align: center; color: var(--texto); margin: 50px 0 20px;">Enfermería</h3>
+  <div class="carousel">
+    <img src="../IMAGEN/j23.jpg" alt="Enfermería 1">
+    <img src="../IMAGEN/j24.jpg" alt="Enfermería 2">
+    <img src="../IMAGEN/j25.jpg" alt="Enfermería 3">
+  </div>
+</section>
+
+<div class="volver">
+  <a href="../index.html" class="boton-link">Regresar</a>
+</div>
+
+<footer>
+  © 2025 - Eventos del Conalep | Con orgullo y creatividad estudiantil
+</footer>
+
+<!-- Visor flotante -->
+<div class="overlay" id="overlay">
+  <img src="" alt="Imagen ampliada" id="imgAmpliada">
+</div>
+
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.carousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      pauseOnHover: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+
+    // Ampliar imagen al hacer clic
+    $('.carousel img, .card img').on('click', function() {
+      const src = $(this).attr('src');
+      $('#imgAmpliada').attr('src', src);
+      $('#overlay').addClass('active');
+    });
+
+    // Cerrar imagen ampliada al hacer clic en el fondo
+    $('#overlay').on('click', function() {
+      $(this).removeClass('active');
+    });
+  });
+</script>
+
+</body>
+</html>

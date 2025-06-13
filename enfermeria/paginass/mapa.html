@@ -1,0 +1,223 @@
+mapa                <!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mapa Curricular - Enfermería General CONALEP</title>
+<style>
+  /* Diseño general */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+  }
+
+  header {
+    background-color: #006341;
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 150px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    transform: skew(-20deg);
+  }
+
+  .logo-conalep {
+    position: absolute;
+    left: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .logo-conalep img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .logo-conalep:hover {
+    transform: scale(1.1);
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  header p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+  }
+
+  section {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  section:hover {
+    transform: translateY(-3px);
+  }
+
+  h2 {
+    color: #006341;
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    color: #004d2c;
+  }
+
+  p, li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .mapa {
+    text-align: center;
+  }
+
+  .mapa img {
+    max-width: 95%;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .mapa img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  }
+
+  footer {
+    text-align: center;
+    background-color: #006341;
+    color: #ffffff;
+    padding: 20px 10px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .back-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #006341;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+  }
+
+  .back-button:hover {
+    background-color: #184838;
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-conalep">
+      <img src="../IMG/logo conalep.jpg" alt="Logo CONALEP">
+    </div>
+    <div>
+      <h1><strong>Mapa</strong> Curricular - Enfermería General</h1>
+      <p>Profesional Técnico Bachiller | Área Salud - CONALEP</p>
+    </div>
+  </header>
+
+  <section class="intro">
+    <h2>¿Qué es el mapa curricular?</h2>
+    <p>
+      El mapa curricular es la estructura académica que guía el proceso formativo del estudiante durante su carrera en CONALEP. En este caso, para la carrera de <strong>Enfermería General</strong>, se divide en tres componentes principales: formación básica, propedéutica y profesional. Este plan tiene una duración de 6 semestres (3 años), con materias teóricas, prácticas y socioemocionales.
+    </p>
+  </section>
+
+  <section class="componentes">
+    <h2>Componentes del Currículo</h2>
+    <div class="componente">
+      <h3>1. Formación Básica</h3>
+      <p>Incluye asignaturas como lenguaje, matemáticas, inglés, ciencias sociales y pensamiento crítico. Su objetivo es fortalecer competencias genéricas aplicables en cualquier contexto profesional.</p>
+    </div>
+    <div class="componente">
+      <h3>2. Formación Propedéutica</h3>
+      <p>Esta sección prepara al estudiante para el enfoque de la carrera en salud, incluyendo temas como ciencias de la salud, tecnologías digitales, ética y contexto humano.</p>
+    </div>
+    <div class="componente">
+      <h3>3. Formación Profesional</h3>
+      <p>Abarca los conocimientos específicos de enfermería como técnicas básicas, atención clínica, urgencias, salud comunitaria y cuidado pediátrico. Se desarrollan tanto en aula como en laboratorios y entornos clínicos.</p>
+    </div>
+  </section>
+
+  <section class="semestres">
+    <h2>Resumen por Semestre</h2>
+    <ul>
+      <li><strong>1º Semestre:</strong> Introducción general, habilidades básicas y primeros contactos con temas de salud.</li>
+      <li><strong>2º y 3º Semestre:</strong> Fortalecimiento académico, comprensión de estructura humana, primeros módulos clínicos.</li>
+      <li><strong>4º al 6º Semestre:</strong> Especialización: pediatría, urgencias, administración y atención hospitalaria real.</li>
+    </ul>
+  </section>
+
+  <section class="mapa">
+    <h2>Visualiza el Mapa Curricular</h2>
+    <img src="../IMG/mapa_curri.jpg" alt="Mapa Curricular">
+  </section>
+
+  <footer>
+    <a href="../inicio.html" class="back-button">INICIO</a>
+    <p>© 2025 CONALEP | DESARROLLADO POR GRUPO 402</p>
+  </footer>
+
+</body>

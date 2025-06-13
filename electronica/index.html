@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electrónica - CONALEP 052 Cárdenas</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #2E8B57;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 60px;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .plantel-title {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #fff;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      background: #2E8B57;
+      color: white;
+      text-decoration: none;
+      margin: 5px 10px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #256d47;
+    }
+
+    .hero {
+      background-image: url('imagenes/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 120px 20px;
+      color: #2E8B57; /* Color verde institucional para todo el texto hero */
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      text-shadow: none; /* Quitada la sombra para mejor lectura */
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-shadow: none;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+      text-shadow: none;
+    }
+
+    .carrusel-container {
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .carrusel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carrusel-img {
+      min-width: 200px;
+      height: 150px;
+      margin: 0 10px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: #2E8B57;
+      color: white;
+      padding: 30px 20px;
+      font-size: 0.9em;
+    }
+
+    footer .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    footer div {
+      flex: 1 1 45%;
+      margin: 10px 0;
+    }
+
+    footer a {
+      color: #c7ffc8;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      .carrusel-track {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="imagenes/LOGO CONA.jpg" class="logo" alt="Logo CONALEP">
+  <div class="plantel-title">CONALEP 052 - Cárdenas</div>
+</header>
+
+<nav>
+  <a href="../index.html">INICIO</a>
+  <a href="paginas/CARRERA.html">CARRERA</a>
+  <a href="paginas/acerca de la carrera.html">ACERCA DE LA CARRERA</a>
+  <a href="paginas/EVENTOS.HTML">EVENTOS</a>
+  <a href="paginas/mapa curricular (2).html">MAPA CURRICULAR</a>
+  <a href="paginas/EVENTOS ESCOLAR.HTML">EVENTOS ESCOLAR</a>
+  <a href="paginas/practicas.html">PRÁCTICAS</a>
+</nav>
+
+<section class="hero">
+  <h2>Estudia Mantenimiento en Sistemas Electrónicos</h2>
+  <h1>Transforma el futuro con tecnología</h1>
+  <p>Forma parte de nuestra carrera y haz que la innovación sea tu realidad.</p>
+</section>
+
+<section style="text-align:center;">
+  <h2 style="margin-top: 30px;">Galería de Nuestro Taller</h2>
+  <div class="carrusel-container">
+    <div class="carrusel-track" id="carrusel-track">
+      <img src="imagenes/elec10.jpg" class="carrusel-img" alt="Foto 1">
+      <img src="imagenes/elec12.jpg" class="carrusel-img" alt="Foto 2">
+      <img src="imagenes/elec15.jpg" class="carrusel-img" alt="Foto 3">
+      <img src="imagenes/elec13.jpg" class="carrusel-img" alt="Foto 4">
+      <img src="imagenes/prac elec6.jpg" class="carrusel-img" alt="Foto 5">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-columns">
+    <div>
+      <p><strong>CONALEP Plantel 052 - Cárdenas, Tabasco</strong></p>
+      <p>Dirección: Carretera Cárdenas-Villahermosa km10.10, Cárdenas, Tabasco</p>
+      <p>Teléfono: (993) 158 39 04 | Email: contacto@conalep052.edu.mx</p>
+      <p>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+      </p>
+    </div>
+    <div>
+      <h4>Integrantes:</h4>
+      <p>Elizabeth Pérez Alcudia</p>
+      <p>Luis Angel Sauz Hernández</p>
+      <p>Iran Andrey Madrigal Córdova</p>
+      <p>Guadalupe del Carmen López de la O</p>
+    </div>
+  </div>
+  <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Uso</a></p>
+</footer>
+
+<script>
+  const track = document.getElementById("carrusel-track");
+  const images = track.querySelectorAll(".carrusel-img");
+  let index = 0;
+
+  function moveCarousel() {
+    index = (index + 1) % images.length;
+    const offset = index * (images[0].offsetWidth + 20); 
+    track.style.transform = `translateX(-${offset}px)`;
+  }
+
+  setInterval(moveCarousel, 3000);
+</script>
+
+</body>
+</html>

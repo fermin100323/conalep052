@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto - CONALEP 052 Cárdenas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f2f6f9;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-color: #007d5c;
+      color: white;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .contact-form h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: #007d5c;
+      text-align: center;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .contact-form button[type="submit"] {
+      background-color: #007d5c;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .contact-form button[type="submit"]:hover {
+      background-color: #005f47;
+    }
+
+    .return-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .return-button a {
+      text-decoration: none;
+    }
+
+    .return-button button {
+      background-color: #ffffff;
+      color: #007d5c;
+      border: 2px solid #007d5c;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .return-button button:hover {
+      background-color: #007d5c;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../IMAGEN/logo.png" alt="Logo Conalep" width="80" loading="lazy">
+    <h1>CONALEP 052 Cárdenas</h1>
+  </header>
+
+  <main>
+    <form class="contact-form" action="https://formsubmit.co/fermin100323@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/estructura/gracias.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <h2>Contáctanos</h2>
+
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+
+      <div class="return-button">
+        <a href="../index.html">
+          <button type="button">Regresar</button>
+        </a>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 CONALEP 052 Cárdenas. Todos los derechos reservados.
+  </footer>
+</body>
+</html>

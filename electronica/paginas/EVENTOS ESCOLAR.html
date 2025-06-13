@@ -1,0 +1,195 @@
+
+            <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Escolares - Nivel Preparatoria</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: rgba(44, 62, 80, 0.39); /* Naranja claro */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50; /* Naranja más intenso */
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .eventos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        
+        .evento {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .evento:hover {
+            transform: translateY(-5px);
+        }
+        
+        .evento-img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .evento-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .evento-info {
+            padding: 15px;
+            flex-grow: 1;
+        }
+        
+        .evento-titulo {
+            margin-top: 0;
+            color: #FF6B00;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+        
+        .evento-fecha {
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .evento-desc {
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .eventos-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Eventos Escolares - Nivel Preparatoria</h1>
+    </div>
+    
+    <div class="eventos-container">
+        <!-- Evento 1 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO1.jpg" alt="Representación de estados" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">PRESENTACIÓN ESTADOS</h3>
+                <p class="evento-desc">Nuestros estudiantes presentaron las características y vestimenta de cada estado de la república.</p>
+            </div>
+        </div>
+        
+        <!-- Evento 2 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO2.jpg" alt="Primeros auxilios" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">PRIMEROS AUXILIOS</h3>
+                <p class="evento-desc">Los estudiantes de enfermería demostraron técnicas de primeros auxilios ante una situación de desmayo.</p>
+            </div>
+        </div>
+        
+        <!-- Evento 3 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO3.jpg" alt="Torneo deportivo" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">TORNEO DEPORTIVO</h3>
+                <p class="evento-desc">Participación destacada de nuestros estudiantes en el torneo interescolar de este año.</p>
+            </div>
+        </div>
+        
+        <!-- Evento 4 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO4.jpg" alt="Mantenimiento del plantel" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">MANTENIMIENTO PLANTEL</h3>
+                <p class="evento-desc">Participación del área de seguridad, policías y militares, junto con estudiantes en labores de limpieza, siembra de árboles y pintura.</p>
+            </div>
+        </div>
+        
+        <!-- Evento 5 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO6.jpg" alt="Plática informativa" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">PLÁTICA INFORMATIVA</h3>
+                <p class="evento-desc">Plática informativa sobre salud física por parte de los estudiantes de enfermería, con entrega de folletos educativos.</p>
+            </div>
+        </div>
+        
+        <!-- Evento 6 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO7.JPG" alt="Villancicos navideños" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">VILLANCICOS NAVIDEÑOS</h3>
+                <p class="evento-desc">Nuestros alumnos demostraron sus habilidades artísticas con bailes y actuaciones alusivas a la navidad.</p>
+            </div>
+        </div>
+        
+        <!-- Evento 7 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO5.jpg" alt="Limpieza ecológica" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">JORNADA DE LIMPIEZA</h3>
+                <p class="evento-desc">Los estudiantes participaron en la recolección de botellas de plástico y otros materiales que afectan el medio ambiente.</p>
+            </div>
+        </div>
+        
+        <!-- Evento 8 -->
+        <div class="evento">
+            <div class="evento-img-container">
+                <img src="../imagenes/ESCO8.jpg" alt="Día de muertos" class="evento-img">
+            </div>
+            <div class="evento-info">
+                <h3 class="evento-titulo">DÍA DE MUERTOS</h3>
+                <p class="evento-desc">Demostración de creatividad en maquillajes, vestimenta y la elaboración de altares, mostrando el trabajo en equipo.</p>
+            </div>
+        </div>
+          <div style="text-align: right">
+    <a href="../index.html"> Regresar</a>
+    </div>
+    </div>
+</body>
+</html>

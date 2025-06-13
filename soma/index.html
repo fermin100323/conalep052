@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOMA | Página Principal</title>
+  <style>
+    :root {
+      --verde-conalep: #007b5f;
+      --verde-oscuro: #007b5f;
+      --gris-fondo: #c0c0c0;
+      --negro: #1e1e1e;
+      --blanco: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--gris-fondo);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--verde-conalep);
+      color: var(--blanco);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c2fbd7;
+    }
+
+    .banner {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+                  url("IMAGEN/CHAAA.jpg") center/cover no-repeat;
+      color: var(--blanco);
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .about {
+      max-width: 800px;
+      margin: 60px auto 20px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .about h2 {
+      color: var(--verde-conalep);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .vermas {
+      margin-top: 30px;
+    }
+
+    .vermas a {
+      background-color: var(--verde-conalep);
+      color: var(--blanco);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .vermas a:hover {
+      background-color: var(--verde-oscuro);
+    }
+
+    .portals {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .portal {
+      background: var(--blanco);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .portal:hover {
+      transform: translateY(-5px);
+    }
+
+    .portal img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    .section-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .section-buttons a {
+      background-color: var(--verde-conalep);
+      color: var(--blanco);
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .section-buttons a:hover {
+      background-color: var(--verde-oscuro);
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="IMAGEN/logo.png" alt="Logo Conalep" width="80" loading="lazy">
+      <div style="margin-left: 15px;">
+        <strong>CONALEP 052</strong><br>SOMA
+      </div>
+    </div>
+    <nav>
+      <a href="../index.html">inicio</a>     
+      <a href="Estructura/conta.html">Contacto</a>
+      <a href="https://www.conalep.edu.mx/inicio">Pagina oficial</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+	   <h1> Soporte y Mantenimiento en Equipo de Cómputo </h1>
+  </div>
+
+  <main>
+    <section class="about">
+      
+		<h2>¿Qué es SOMA?</h2>
+      <p>SOMA es la especialidad de Soporte y Mantenimiento en Equipos de Cómputo, donde desarrollas habilidades técnicas, prácticas y humanas para enfrentar los retos del mundo tecnológico actual.</p>
+      <div class="vermas">
+        <a href="Estructura/som.html">Ver más</a>
+      </div>
+    </section>
+
+    <section class="portals">
+      <a href="Estructura/inte.html" class="portal">
+        <img src="IMAGEN/casa.png" alt="Datos del alumno" loading="lazy">
+        <p>Datos del alumno</p>
+      </a>
+      <a href="Estructura/va.html" class="portal">
+        <img src="IMAGEN/mula.png" alt="Misión del Conalep" loading="lazy">
+        <p>Valores</p>
+      
+      <a href="Estructura/hora.html" class="portal">
+        <img src="IMAGEN/calendar.png" alt="Horario escolar" loading="lazy">
+        <p>Horario</p>
+      </a>
+    </section>
+
+    <div class="section-buttons">
+      <a href="Estructura/ferr.html">MAPA CURRICULAR</a>
+      <a href="Estructura/Diag.html">PRACTICAS</a>
+      <a href="Estructura/reco.html">RECONOCIMIENTO</a>
+      <a href="Estructura/tra.html">CAMPO LABORAL</a>
+      <a href="Estructura/Even.html">EVENTOS</a>
+	   <a href="Estructura/cale.html">CALENDARIO</a>
+     <a href="">Sexto semestre</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 SOMA. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

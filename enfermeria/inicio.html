@@ -1,0 +1,316 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enfermería CONALEP 052</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #006341;
+    --verde-claro: #5ab98a;
+    --blanco: #ffffff;
+    --gris-claro: #f0f0f0;
+    --sombra: rgba(0, 0, 0, 0.15);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--blanco);
+    color: #333;
+  }
+
+ 
+  header {
+    background-color: var(--verde);
+    color: var(--blanco);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--sombra);
+    animation: slideDown 1s ease;
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .logo-container {
+    flex-shrink: 0;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--blanco);
+    animation: rotateLogo 5s linear infinite;
+  }
+
+  @keyframes rotateLogo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  header nav a {
+    color: var(--blanco);
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  header nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: var(--blanco);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+
+  header nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    header nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    header nav a {
+      margin: 5px 8px;
+      font-size: 14px;
+    }
+  }
+
+  @keyframes slideDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../enfermeria/IMG/enfe.jpeg") center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    text-align: center;
+    padding: 120px 20px 20px;
+    animation: fadeIn 2s ease;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #000;
+    animation: bounceIn 1.5s ease;
+  }
+
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px #000;
+  }
+
+  .cta {
+    background-color: var(--verde-claro);
+    color: #000;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px var(--sombra);
+  }
+
+  .cta:hover {
+    background-color: var(--verde);
+    color: var(--blanco);
+    transform: translateY(-3px);
+  }
+
+  section {
+    padding: 60px 20px;
+    background-color: var(--gris-claro);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  section:nth-of-type(even) { background-color: var(--blanco); }
+
+  section h2 {
+    color: var(--verde);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    background-color: var(--blanco);
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
+    box-shadow: 0 6px 15px var(--sombra);
+    border-bottom: 5px solid var(--verde);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 99, 65, 0.4);
+  }
+
+  .card h3 {
+    color: var(--verde);
+    margin-bottom: 10px;
+  }
+
+  footer {
+    background-color: var(--verde);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: #ffff66;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="../enfermeria/IMG/logo conalep.jpg" alt="Logo CONALEP" class="logo">
+    </div>
+    <nav>
+      <a href="../index.html" class="boton-link">INICIO</a>
+      <a href="../enfermeria/paginass/presentacion.html">PRESENTACION</a>
+      <a href="../enfermeria/paginass/SOBRE_LA_CARRERA.html">SOBRE LA CARRERA</a>
+      <a href="../enfermeria/paginass/mapa.html">MAPA CURRICULAR</a>
+      <a href="../enfermeria/paginass/participaciones conalep.html">PARTICIPACIONES</a>
+	  <a href="../enfermeria/paginass/practicas.html">PRACTICAS</a>
+      
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Enfermería General - CONALEP 052</h1>
+  <p>Forma parte de los profesionales que cuidan la vida con entrega y vocación.</p>
+  <a href="../enfermeria/paginass/solicita informacion.html" class="cta">Solicita Información</a>
+</section>
+
+<section id="carrera">
+  <h2>Sobre la Carrera</h2>
+  <p style="text-align: center; max-width: 800px; margin: auto;">
+    La carrera de Enfermería General en el CONALEP forma técnicos comprometidos con la salud, capaces de brindar atención básica, cuidados primarios y orientación comunitaria.
+  </p>
+</section>
+
+<section id="practicas">
+  <h2>Prácticas Profesionales</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Hospitales</h3>
+      <p>Prácticas en instituciones públicas y privadas para el desarrollo clínico real.</p>
+    </div>
+    <div class="card">
+      <h3>Centros de Salud</h3>
+      <p>Atención preventiva y promoción de la salud en comunidades.</p>
+    </div>
+    <div class="card">
+      <h3>Casas de Asistencia</h3>
+      <p>Apoyo y acompañamiento a adultos mayores y grupos vulnerables.</p>
+    </div>
+  </div>
+</section>
+
+<section id="eventos">
+  <h2>Eventos de Participación</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Jornadas de Vacunación</h3>
+      <p>Participación activa en campañas regionales de salud preventiva.</p>
+    </div>
+    <div class="card">
+      <h3>Días de la Salud</h3>
+      <p>Actividades informativas, ferias y charlas dentro del plantel.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>CONALEP Plantel 052 Cárdenas</strong></p>
+  <p>Carretera Cárdenas - Villahermosa Km 5.5 | Tel: (993) 123-4567</p>
+  <p>Email: contacto@conalep052.edu.mx</p>
+  <p>
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">WhatsApp</a>
+  </p>
+  <p>&copy; 2025 CONALEP. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

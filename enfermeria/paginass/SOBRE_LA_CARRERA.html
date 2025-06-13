@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrera de Enfermería</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e6f2ff;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #d9f2e6; /* Verde suave */
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 15px;
+        animation: fadeIn 1s ease;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 3px solid #006341;
+        background-color: #00994d;
+        color: white;
+        margin-bottom: 20px;
+        border-radius: 15px 15px 0 0;
+        animation: slideDown 1s ease;
+    }
+
+    h1, h2 {
+        font-family: Arial;
+        animation: colorChange 3s infinite alternate;
+    }
+
+    h1 {
+        font-size: 18pt;
+        color: white;
+    }
+
+    h2 {
+        color: #006341;
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 5px;
+        margin-top: 30px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #cce0d9;
+    }
+
+    .logo {
+        max-width: 150px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #006341;
+    }
+
+    .section {
+        margin: 30px 0;
+    }
+
+    .section-images {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .section img {
+        width: 48%; /* Ajusta para dejar espacio y nivelar las imágenes */
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .text-content {
+        margin-top: 15px;
+    }
+
+    ul {
+        list-style-type: square;
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #00994d;
+        color: white;
+        margin-top: 30px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .boton-principal {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #00994d;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        font-weight: 600;
+        transition: background-color 0.3s, transform 0.3s;
+        margin: 20px auto;
+        animation: fadeInUp 1s ease;
+    }
+
+    .boton-principal:hover {
+        background-color: #007a3d;
+        transform: translateY(-3px);
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+        from { transform: translateY(-20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes colorChange {
+        0% { color: #006341; }
+        100% { color: #004d26; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <img src="../IMG/logo conalep.jpg" alt="logo conalep" class="logo">
+        <h1>CARRERA DE ENFERMERÍA: CUIDANDO VIDAS, TRANSFORMANDO EL FUTURO</h1>
+      
+    </header>
+
+    <div class="section">
+        <h2>¿Qué es la Enfermería?</h2>
+        <div class="section-images">
+            <img src="../IMG/enfermeria.jpg" alt="enfermeria">
+            <img src="../IMG/enfer2.jpg" alt="enefer2">
+        </div>
+        <div class="text-content">
+            <p>La enfermería es una profesión del área de la salud dedicada al cuidado integral del individuo, familia y comunidad en todas las etapas de la vida. Los profesionales de enfermería combinan conocimientos científicos con habilidades técnicas y una gran capacidad humana para brindar atención de calidad.</p>
+            <p>Los enfermeros desempeñan un papel crucial en el sistema de salud y su trabajo es fundamental, no solo se enfoca en el cuidado de enfermedades, sino también en la promoción de la salud, prevención de enfermedades y rehabilitación de los pacientes. Es una disciplina que requiere compromiso, empatía y constante actualización.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Campo Laboral</h2>
+        <div class="section-images">
+            <img src="../IMG/cam.jpeg" alt="campolab">
+            <img src="../IMG/campo laboral.jpg" alt="campo laboral">
+        </div>
+        <div class="text-content">
+            <p><strong>Los enfermeros pueden trabajar en diversos entornos:</strong></p>
+            <ul>
+                <li>Hospitales y clínicas (en diferentes áreas como pediatría, geriatría, urgencias, etc.)</li>
+                <li>Atención primaria en centros de salud</li>
+                <li>Empresas (en departamentos de salud ocupacional)</li>
+                <li>Instituciones educativas</li>
+                <li>Investigación en salud</li>
+                <li>Docencia universitaria</li>
+                <li>Atención domiciliaria</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Perfil del Estudiante</h2>
+        <div class="section-images">
+            <img src="../IMG/perfil1.jpg" alt="Estudiante de enfermería">
+            <img src="../IMG/perfil del estudiante.jpg" alt="perfil del estudiante">
+        </div>
+        <div class="text-content">
+            <p><strong>Para estudiar enfermería se recomienda tener:</strong></p>
+            <ul>
+                <li>Vocación de servicio y ayuda a los demás</li>
+                <li>Capacidad para manejar el estrés y ansiedad</li>
+                <li>Habilidad para trabajar en equipo</li>
+                <li>Interés por la ciencia y la salud</li>
+                <li>Empatía y respeto por la dignidad humana</li>
+                <li>Compromiso con tu bienestar físico y emocional</li>
+                <li>Actitud de aprendizaje continuo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Especializaciones</h2>
+        <div class="section-images">
+            <img src="../IMG/cofias enfer.jpg" alt="cofias enfer">
+            <img src="../IMG/especia.jpg" alt="Enfermera especializada">
+        </div>
+        <div class="text-content">
+            <p><strong>Después de obtener el título básico, los enfermeros pueden especializarse en áreas como:</strong></p>
+            <ul>
+                <li>Enfermería pediátrica</li>
+                <li>Enfermería geriátrica</li>
+                <li>Enfermería en cuidados intensivos</li>
+                <li>Enfermería en salud mental</li>
+                <li>Enfermería quirúrgica</li>
+                <li>Enfermería comunitaria</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="../inicio.html" class="boton-principal">INICIO</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Carrera de Enfermería - Todos los derechos reservados</p>
+    </footer>
+</div>
+</body>
+</html>

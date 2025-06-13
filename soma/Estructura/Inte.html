@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de alumnos</title>
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+      font-size: 2.2em;
+    }
+
+    .contenedor-alumnos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tarjeta-alumno {
+      background: white;
+      border: 2px solid #d1d9e6;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tarjeta-alumno:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .foto-alumno {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #1976D2;
+    }
+
+    .alumno-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nombre {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #2c3e50;
+    }
+
+    .dato {
+      font-size: 0.85em;
+      color: #555;
+    }
+
+    .volver {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .volver a {
+      background-color: #1976D2;
+      color: white;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 1em;
+      box-shadow: 0 4px 10px rgba(25,118,210,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .volver a:hover {
+      background-color: #135ba1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lista de Alumnos</h1>
+  <div class="contenedor-alumnos">
+
+    <div class="tarjeta-alumno"><img class="foto-alumno" src="../IMAGEN/alu.png" alt="Alumno"><div class="alumno-info"><span class="nombre">Jostin Salvador Hernandez Mena</span><span class="dato">Matrícula: 230520061-6</span><span class="dato">Plantel: Cárdenas</span><span class="dato">Sexo: H</span><span class="dato">Carrera: Soporte y Mantenimiento de Equipo de Cómputo</span><span class="dato">Grupo 402</span></div></div>
+
+    <div class="tarjeta-alumno"><img class="foto-alumno" src="../IMAGEN/alu.png" alt="Alumno"><div class="alumno-info"><span class="nombre">Ángel Ricardo Velázquez Ramos</span><span class="dato">Matrícula: 230520038-4</span><span class="dato">Plantel: Cárdenas</span><span class="dato">Sexo: H</span><span class="dato">Carrera: Soporte y Mantenimiento de Equipo de Cómputo</span><span class="dato">Grupo 402</span></div></div>
+
+    <div class="tarjeta-alumno"><img class="foto-alumno" src="../IMAGEN/alu.png" alt="Alumno"><div class="alumno-info"><span class="nombre">Luis Ernesto Álvarez Esquivel</span><span class="dato">Matrícula: 230520001-2</span><span class="dato">Plantel: Cárdenas</span><span class="dato">Sexo: H</span><span class="dato">Carrera: Soporte y Mantenimiento de Equipo de Cómputo</span><span class="dato">Grupo 402</span></div></div>
+
+    <div class="tarjeta-alumno"><img class="foto-alumno" src="../IMAGEN/alu.png" alt="Alumno"><div class="alumno-info"><span class="nombre">Ángel David García Álvarez</span><span class="dato">Matrícula: 230520012-9</span><span class="dato">Plantel: Cárdenas</span><span class="dato">Sexo: H</span><span class="dato">Carrera: Soporte y Mantenimiento de Equipo de Cómputo</span><span class="dato">Grupo 402</span></div></div>
+
+    <div class="tarjeta-alumno"><img class="foto-alumno" src="../IMAGEN/alu.png" alt="Alumno"><div class="alumno-info"><span class="nombre">Fermín Jareth Hernández Ventura</span><span class="dato">Matrícula: 230520021-0</span><span class="dato">Plantel: Cárdenas</span><span class="dato">Sexo: H</span><span class="dato">Carrera: Soporte y Mantenimiento de Equipo de Cómputo</span><span class="dato">Grupo 402</span></div></div>
+
+    <div class="tarjeta-alumno"><img class="foto-alumno" src="../IMAGEN/alu.png" alt="Alumno"><div class="alumno-info"><span class="nombre">Josué Pérez García</span><span class="dato">Matrícula: 230520098-8</span><span class="dato">Plantel: Cárdenas</span><span class="dato">Sexo: H</span><span class="dato">Carrera: Soporte y Mantenimiento de Equipo de Cómputo</span><span class="dato">Grupo 402</span></div></div>
+
+    <div class="tarjeta-alumno"><img class="foto-alumno" src="../IMAGEN/alu.png" alt="Alumno"><div class="alumno-info"><span class="nombre">Pablo Rodríguez González</span><span class="dato">Matrícula: 230520034-3</span><span class="dato">Plantel: Cárdenas</span><span class="dato">Sexo: H</span><span class="dato">Carrera: Soporte y Mantenimiento de Equipo de Cómputo</span><span class="dato">Grupo 402</span></div></div>
+
+  </div>
+
+  <div class="volver">
+    <a href="../index.html">Regresar</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Enfermería General - CONALEP 052</title>
+<style>
+  /* Diseño general */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* fondo negro */
+    color: #000000; /* texto negro */
+  }
+
+  header {
+    background-color: #006341; /* verde CONALEP */
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 150px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    transform: skew(-20deg);
+  }
+
+  .logo-conalep {
+    position: absolute;
+    left: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .logo-conalep img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .logo-conalep:hover {
+    transform: scale(1.1);
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+    color: #fff;
+  }
+
+  header p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #d0f0c0; /* verde claro para subtítulo */
+  }
+
+  @keyframes fadeInUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  section {
+    background-color: #e6f1de; /* verde muy claro para contenedores */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    color: #000000; /* texto negro */
+    transition: transform 0.3s ease;
+  }
+
+  section:hover {
+    transform: translateY(-3px);
+  }
+
+  h2 {
+    color: #006341;
+    margin-top: 0;
+    font-size: 1.7rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .experiencia-list li {
+    margin-bottom: 8px;
+  }
+
+  .imagen {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .imagen img {
+    max-width: 100%;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+
+  .imagen img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  }
+
+  video {
+    display: block;
+    margin: 0 auto 40px;
+    border-radius: 12px;
+    box-shadow: 0 7px 25px rgba(0,100,50,0.4);
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #006341;
+    color: #ffffff;
+    padding: 20px 10px;
+    margin-top: 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+  }
+
+  /* Botón de redirección a la página de inicio */
+  #btn-home {
+    position: fixed;
+    bottom: 38px;
+    right: 38px;
+    background-color: #317831;
+    color: #a8d5a8;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 7px 22px rgba(49,120,49,0.7);
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+    user-select: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #btn-home:hover {
+    background-color: #a8d5a8;
+    color: #317831;
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 720px) {
+    header {
+      padding: 15px 20px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    main {
+      padding: 0 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-conalep" aria-label="Logo CONALEP">
+    <img src="CONALEP-Logo.png" alt="Logo CONALEP" />
+  </div>
+  <div>
+    <h1>Enfermería General - CONALEP 052</h1>
+    <p>Escuela CONALEP Plantel 052</p>
+  </div>
+</header>
+
+<main>
+  <section aria-label="Experiencia en enfermería">
+    <h2>Experiencia</h2>
+    <p>Como parte de nuestra formación en enfermería, realizamos diversas prácticas que nos ayudan a adquirir experiencia y desarrollar habilidades fundamentales, por ejemplo:</p>
+    <ul class="experiencia-list">
+      <li>Práctica de venoclisis</li>
+      <li>Práctica de calzado de guantes con técnica abierta y cerrada</li>
+      <li>Técnica de lavado de manos quirúrgica</li>
+      <li>Colocación de bata estéril</li>
+      <li>Día mundial contra la diabetes en la clínica ISSSTE</li>
+    </ul>
+    <video controls aria-label="Video demostrativo de prácticas de enfermería" tabindex="0">
+      <source src="video.mp4" type="video/mp4" />
+      
+    </video>
+  </section>
+
+  <section class="imagen" aria-label="Imagen relacionada a enfermería">
+    <img src="ENFE (1).jpeg" alt="Imagen de Enfermería General" />
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Escuela CONALEP 052 | Desarrollado por <strong>GRUPO 402</strong>
+</footer>
+
+<!-- Botón de redirección a la página de inicio -->
+<a href="../inicio.html" id="btn-home" aria-label="Ir a la página de inicio" title="Página de inicio">🏠</a>
+
+</body>
+</html>

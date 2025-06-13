@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participaciones - CONALEP 052</title>
+<style>
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
+  background-color: #006633;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 80px;
+  margin-right: 20px;
+}
+
+.header-text {
+  flex-grow: 1;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-style: italic;
+}
+
+/* Título principal */
+.main-title {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 40px;
+  font-size: 32px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Sección de participaciones */
+.participaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* Cada participación */
+.participacion {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.participacion:hover {
+  transform: translateY(-5px);
+}
+
+/* Contenedor de imágenes */
+.imagenes-participacion {
+  display: flex;
+  width: 60%;
+  flex-shrink: 0;
+}
+
+.imagen-izq, .imagen-der {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  border-radius: 5px;
+}
+
+.imagen-izq:hover, .imagen-der:hover {
+  transform: scale(1.05) rotate(2deg);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+.imagen-izq {
+  border-right: 3px solid #a5d6a7;
+}
+
+/* Contenido */
+.contenido-participacion {
+  width: 40%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenido-participacion h2 {
+  color: #006633;
+  margin-top: 0;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 10px;
+}
+
+.contenido-participacion p {
+  line-height: 1.6;
+}
+
+/* Botón de regreso */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: #006633;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #004d26;
+  transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+  background-color: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .imagenes-participacion {
+    width: 50%;
+  }
+  .contenido-participacion {
+    width: 50%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo {
+    margin: 0 auto 15px;
+  }
+  .participacion {
+    flex-direction: column;
+  }
+  .imagenes-participacion {
+    width: 100%;
+  }
+  .imagen-izq, .imagen-der {
+    height: 200px;
+  }
+  .contenido-participacion {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <img src="../IMG/logo conalep.jpg" alt="Logo CONALEP" class="logo" style="border-radius: 10px;">
+    <div class="header-text">
+      <h1>CONALEP 052</h1>
+      <p>Participación estudiantes</p>
+    </div>
+  </header>
+
+  <h2 class="main-title"><strong>Participación CONALEP 052</strong></h2>
+
+  <div class="participaciones">
+    <!-- Participación 1 -->
+    <div class="participacion">
+      <div class="imagenes-participacion">
+        <img src="../IMG/part muertos.jpg" alt="part muertos" class="imagen-izq">
+        <img src="../IMG/altar.jpg" alt="altar" class="imagen-der">
+      </div>
+      <div class="contenido-participacion">
+        <h2>Concurso de altar de muertos</h2>
+        <p>Nuestros estudiantes concursaron entre los diferentes grupos. En los altares y vestimenta se dio a conocer la creatividad que tuvo cada uno de ellos y la organización y participación como grupos.</p>
+      </div>
+    </div>
+
+    <!-- Participación 2 -->
+    <div class="participacion">
+      <div class="imagenes-participacion">
+        <img src="../IMG/torneo.jpg" alt="torneo conalep" class="imagen-izq">
+        <img src="../IMG/deporte.jpg" alt="deporte" class="imagen-der">
+      </div>
+      <div class="contenido-participacion">
+        <h2>Torneo Interescolar de Voleibol</h2>
+        <p>El equipo de voleibol femenil y masculino de nuestro plantel representó al CONALEP en el torneo contra otros planteles, demostrando disciplina y trabajo en equipo. Este logro representa nuestro compromiso con el desarrollo integral de los estudiantes.</p>
+      </div>
+    </div>
+
+    <!-- Participación 3 -->
+    <div class="participacion">
+      <div class="imagenes-participacion">
+        <img src="../IMG/enfe simulacro.jpg" alt="actividad enfe" class="imagen-izq">
+        <img src="../IMG/simulacro.jpg" alt="enfe simulacro" class="imagen-der">
+      </div>
+      <div class="contenido-participacion">
+        <h2>Actividad enfermería</h2>
+        <p>Presentamos actividades de ayuda ante un simulacro y cómo cuidar nuestra salud a través de una buena alimentación y una fuente de información confiable. Nuestros estudiantes de la carrera de enfermería participaron con entusiasmo.</p>
+      </div>
+    </div>
+
+    <!-- Participación 4 -->
+    <div class="participacion">
+      <div class="imagenes-participacion">
+        <img src="../IMG/limpieza cona.jpg" alt="limpieza cona" class="imagen-izq">
+        <img src="../IMG/limpieza arbol.jpg" alt="limpieza arbol" class="imagen-der">
+      </div>
+      <div class="contenido-participacion">
+        <h2>Mantenimiento CONALEP</h2>
+        <p>Nuestro plantel tuvo mantenimiento de limpieza con ayuda de los integrantes de seguridad, policías y militares. Participaron junto con estudiantes, realizando actividades como pintar y sembrar árboles.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón de regreso al inicio -->
+  <div style="text-align:center;">
+								 <a href="../inicio.html" class="back-button">INICIO</a>
+  </div>
+
+  <footer>
+    <p>© 2025 CONALEP 052 - Carreras técnicas</p>
+  </footer>
+</div>
+</body>
+</html>
