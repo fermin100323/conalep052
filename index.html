@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Conalep 052</title>
+  <link rel="preload" as="image" href="imagenes/img9.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal"></script>
+  
+
   <style>
     :root {
       --verde: #006837;
@@ -22,12 +25,14 @@
     }
 
     body {
+      
       background-color: var(--gris-claro);
       color: #333;
-      transition: background 1s ease;
+      transition: background 1s ease; 
     }
 
     nav {
+      
       width: 100%;
       background-color: transparent;
       color: white;
@@ -334,6 +339,8 @@
   </style>
 </head>
 <body>
+  <img src="imagenes/img9.jpg" alt="preload-img" style="display: none;" loading="eager"/>
+
 
 <nav>
   <div class="nav-logo">
@@ -409,7 +416,7 @@
   <p>&copy; 2025 Conalep 052</p>
 </footer>
 
-<!-- Botón regresar arriba -->
+
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="scroll-top-btn">↑</button>
 
 <script>
