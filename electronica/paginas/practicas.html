@@ -121,18 +121,20 @@
     <img class="modal-content" id="imgModal">
   </div>
 	<div style="text-align: right">
-    <div class="volver"></div>
-    <a href="../index.html" class="boton-link"> Regresar</a>
-    <style>
+   <div class="volver">
+  <a href="../index.html" class="boton-link">Regresar</a>
+</div>
+
+<style>
   .volver {
     width: 90%;
     margin: 30px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
-  .volver a.boton-link,
-  .volver button {
+
+  .boton-link {
     background-color: #1976D2;
     color: white;
     border: none;
@@ -145,11 +147,12 @@
     text-align: center;
     transition: background-color 0.3s ease;
   }
-  .volver a.boton-link:hover,
-  .volver button:hover {
+
+  .boton-link:hover {
     background-color: #135ba1;
   }
-  </style>
+</style>
+
 
   <script>
     function openModal(src) {
