@@ -48,8 +48,10 @@
     }
 
     .nav-logo img {
-      height: 50px;
-    }
+  height: 50px;
+  animation: logoSpinIn 1s ease-out forwards;
+     }
+
 
     .nav-links {
       display: flex;
@@ -320,6 +322,17 @@
         transform: translateY(0);
       }
     }
+    @keyframes logoSpinIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-360deg) scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
 
    
     .scroll-top-btn {
@@ -344,7 +357,7 @@
 
 <nav>
   <div class="nav-logo">
-    <img src="imagenes/conalep.png" alt="Logo Conalep" />
+    <img src="imagenes/conalep.png" alt="Logo Conalep" style="height: 100px;"/>
   </div>
   <div class="nav-links">
     <a href="https://www.conalep.edu.mx/blogs-grid">Noticias</a>
