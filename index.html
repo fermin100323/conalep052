@@ -7,7 +7,6 @@
   <link rel="preload" as="image" href="imagenes/img9.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal"></script>
-  
 
   <style>
     :root {
@@ -25,33 +24,31 @@
     }
 
     body {
-      
       background-color: var(--gris-claro);
       color: #333;
       transition: background 1s ease; 
     }
 
     nav {
-      
       width: 100%;
-      background-color: transparent;
-      color: white;
-      position: absolute;
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #333;
+      position: fixed;
       top: 0;
       left: 0;
-      z-index: 10;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       animation: fadeInDown 1s ease-out forwards;
     }
 
     .nav-logo img {
-  height: 50px;
-  animation: logoSpinIn 1s ease-out forwards;
-     }
-
+      height: 60px;
+      animation: logoSpinIn 1s ease-out forwards;
+    }
 
     .nav-links {
       display: flex;
@@ -60,14 +57,14 @@
     }
 
     .nav-links a {
-      color: white;
+      color: #333;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
     }
 
     .nav-links a:hover {
-      color: #ddd;
+      color: var(--verde);
     }
 
     .nav-icons a img {
@@ -85,20 +82,35 @@
       animation: funnyBounce 1s ease-in-out infinite;
     }
 
-    @keyframes funnyBounce {
-      0% { transform: rotate(0deg) scale(1); }
-      20% { transform: rotate(15deg) scale(1.2); }
-      40% { transform: rotate(-15deg) scale(0.9); }
-      60% { transform: rotate(10deg) scale(1.1); }
-      80% { transform: rotate(-10deg) scale(1); }
-      100% { transform: rotate(0deg) scale(1); }
-    }
-
     .nav-icons a:hover img {
       filter: brightness(0.8);
     }
 
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .nav-logo img {
+        height: 50px;
+      }
+    }
+
     header {
+      margin-top: 100px;
       background-image: url('imagenes/img9.jpg');
       background-size: cover;
       background-repeat: no-repeat;
@@ -112,7 +124,6 @@
       text-align: center;
       position: relative;
     }
-
 
     header::before {
       content: "";
@@ -302,39 +313,29 @@
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+
     @keyframes logoSpinIn {
-  0% {
-    opacity: 0;
-    transform: rotate(-360deg) scale(0.3);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
-  }
-}
+      0% { opacity: 0; transform: rotate(-360deg) scale(0.3); }
+      100% { opacity: 1; transform: rotate(0deg) scale(1); }
+    }
 
+    @keyframes funnyBounce {
+      0% { transform: rotate(0deg) scale(1); }
+      20% { transform: rotate(15deg) scale(1.2); }
+      40% { transform: rotate(-15deg) scale(0.9); }
+      60% { transform: rotate(10deg) scale(1.1); }
+      80% { transform: rotate(-10deg) scale(1); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
 
-   
     .scroll-top-btn {
       position: fixed;
       bottom: 30px;
@@ -354,104 +355,94 @@
 <body>
   <img src="imagenes/img9.jpg" alt="preload-img" style="display: none;" loading="eager"/>
 
-
-<nav>
-  <div class="nav-logo">
-    <img src="imagenes/conalep.png" alt="Logo Conalep" style="height: 100px;"/>
-  </div>
-  <div class="nav-links">
-    <a href="https://www.conalep.edu.mx/blogs-grid">Noticias</a>
-    <a href="https://www.facebook.com/share/15r9aNVjJh/">Jovenes por la paz</a>
-    <a href="https://www.facebook.com/share/1CCsVq4qLv/">Igualdad de genero </a>
-
-    <div class="nav-icons">
-      <a href="https://www.facebook.com/p/Conalep-Plantel-052-C%C3%A1rdenas-100087362920226/?locale=es_LA" target="_blank">
-        <img src="imagenes/facebook.png" alt="Facebook" class="facebook-icon" />
-      </a>
+  <nav>
+    <div class="nav-logo">
+      <img src="imagenes/conalep.png" alt="Logo Conalep" />
     </div>
-  </div>
-</nav>
-
-<header>
-  <div class="hero-content">
-    <h1>Bienvenidos al Conalep 052</h1>
-    <p>Formando profesionales técnicos con compromiso social, habilidades tecnológicas y visión de futuro.</p>
-  </div>
-</header>
-
-<section class="section">
-  <h2>¿Por qué elegirnos?</h2>
-  <div class="features">
-    <div class="feature">
-      <div class="icon-container">
-        <img src="imagenes/com.png" alt="SOMA" />
+    <div class="nav-links">
+      <a href="https://www.conalep.edu.mx/blogs-grid">Noticias</a>
+      <a href="https://www.facebook.com/share/15r9aNVjJh/">Jóvenes por la paz</a>
+      <a href="https://www.facebook.com/share/1CCsVq4qLv/">Igualdad de género</a>
+      <div class="nav-icons">
+        <a href="https://www.facebook.com/p/Conalep-Plantel-052-C%C3%A1rdenas-100087362920226/?locale=es_LA" target="_blank">
+          <img src="imagenes/facebook.png" alt="Facebook" class="facebook-icon" />
+        </a>
       </div>
-      <h3>SOMA</h3>
-      <p>Domina redes, programación y software con enfoque práctico para el mundo digital, desarrollando habilidades útiles y aplicables en la vida profesional.</p>
-      <button onclick="location.href='soma/index.html'">Ingresar</button>
     </div>
-    <div class="feature">
-      <div class="icon-container">
-        <img src="imagenes/ele.png" alt="EKIN" />
+  </nav>
+
+  <header>
+    <div class="hero-content">
+      <h1>Bienvenidos al Conalep 052</h1>
+      <p>Formando profesionales técnicos con compromiso social, habilidades tecnológicas y visión de futuro.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="icon-container"><img src="imagenes/com.png" alt="SOMA" /></div>
+        <h3>SOMA</h3>
+        <p>Domina redes, programación y software con enfoque práctico para el mundo digital.</p>
+        <button onclick="location.href='soma/index.html'">Ingresar</button>
       </div>
-      <h3>EKIN</h3>
-      <p>Aprende a diseñar, analizar y reparar sistemas electrónicos con un enfoque práctico, aplicando tus conocimientos en proyectos reales del entorno tecnológico actual.</p>
-      <button onclick="location.href='electronica/index.html'">Ingresar</button>
-    </div>
-    <div class="feature">
-      <div class="icon-container">
-        <img src="imagenes/emf.png" alt="ENFE" />
+      <div class="feature">
+        <div class="icon-container"><img src="imagenes/ele.png" alt="EKIN" /></div>
+        <h3>EKIN</h3>
+        <p>Diseña y repara sistemas electrónicos aplicando tus conocimientos en proyectos reales.</p>
+        <button onclick="location.href='electronica/index.html'">Ingresar</button>
       </div>
-      <h3>ENFE</h3>
-      <p>Domina técnicas, cuidados y conocimientos en enfermería con enfoque práctico para el mundo de la salud, desarrollando habilidades clave para tu vida profesional.</p>
-      <button onclick="location.href='enfermeria/inicio.html'">Ingresar</button>
+      <div class="feature">
+        <div class="icon-container"><img src="imagenes/emf.png" alt="ENFE" /></div>
+        <h3>ENFE</h3>
+        <p>Domina técnicas y cuidados de enfermería con enfoque práctico para la vida profesional.</p>
+        <button onclick="location.href='enfermeria/inicio.html'">Ingresar</button>
+      </div>
     </div>
-  </div>
 
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <img src="imagenes/img1.jpg" alt="Imagen 1" />
-      <img src="imagenes/img2.jpg" alt="Imagen 2" />
-      <img src="imagenes/img3.jpg" alt="Imagen 3" />
-      <img src="imagenes/img4.jpg" alt="Imagen 4" />
-      <img src="imagenes/img5.jpg" alt="Imagen 5" />
-      <img src="imagenes/img6.jpg" alt="Imagen 6" />
-      <img src="imagenes/img7.jpg" alt="Imagen 7" />
-      <img src="imagenes/img8.jpg" alt="Imagen 8" />
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="imagenes/img1.jpg" alt="Imagen 1" />
+        <img src="imagenes/img2.jpg" alt="Imagen 2" />
+        <img src="imagenes/img3.jpg" alt="Imagen 3" />
+        <img src="imagenes/img4.jpg" alt="Imagen 4" />
+        <img src="imagenes/img5.jpg" alt="Imagen 5" />
+        <img src="imagenes/img6.jpg" alt="Imagen 6" />
+        <img src="imagenes/img7.jpg" alt="Imagen 7" />
+        <img src="imagenes/img8.jpg" alt="Imagen 8" />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>Correo: contacto@conalep052.edu.mx</p>
-  <p>Teléfono: 937 372 0255</p>
-  <p>Dirección: Profa. Rosario Gil González, Cárdenas Centro, México, 86500</p>
-  <p>&copy; 2025 Conalep 052</p>
-</footer>
+  <footer>
+    <p>Correo: contacto@conalep052.edu.mx</p>
+    <p>Teléfono: 937 372 0255</p>
+    <p>Dirección: Profa. Rosario Gil González, Cárdenas Centro, México, 86500</p>
+    <p>&copy; 2025 Conalep 052</p>
+  </footer>
 
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="scroll-top-btn">↑</button>
 
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="scroll-top-btn">↑</button>
+  <script>
+    ScrollReveal().reveal('.feature', {
+      origin: 'bottom',
+      distance: '50px',
+      duration: 1000,
+      delay: 200,
+      interval: 200,
+      opacity: 0,
+      easing: 'ease-out'
+    });
 
-<script>
-  ScrollReveal().reveal('.feature', {
-    origin: 'bottom',
-    distance: '50px',
-    duration: 1000,
-    delay: 200,
-    interval: 200,
-    opacity: 0,
-    easing: 'ease-out'
-  });
-
-  ScrollReveal().reveal('.carousel-container, footer', {
-    origin: 'bottom',
-    distance: '30px',
-    duration: 1200,
-    delay: 500,
-    opacity: 0,
-    easing: 'ease-out'
-  });
-</script>
-
+    ScrollReveal().reveal('.carousel-container, footer', {
+      origin: 'bottom',
+      distance: '30px',
+      duration: 1200,
+      delay: 500,
+      opacity: 0,
+      easing: 'ease-out'
+    });
+  </script>
 </body>
 </html>
